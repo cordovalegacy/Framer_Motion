@@ -11,11 +11,13 @@ import Scroll from './components/Scroll'
 // !Packages and Dependencies
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import InView from './components/InView'
+import AnimatedText from './components/AnimatedText'
 
 function App() {
 
-// *used for route page change animation (animate presence)
-  const location = useLocation() 
+  // *used for route page change animation (animate presence)
+  const location = useLocation()
 
   // *scroll is a self closing div that has fixed positioning
   // *rotate is a click event that rotates an item
@@ -27,8 +29,11 @@ function App() {
 
   return (
     <>
-      <Scroll /> 
+    
+      <Scroll />
+      <AnimatedText text="This is animated text" className='text-white text-center text-3xl' />
       <Rotate />
+      <InView />
       <Slide />
       <Scale />
       <Drag />
@@ -41,7 +46,7 @@ function App() {
           <Route path='/right' element={<Pages />} />
         </Routes>
       </AnimatePresence>
-      
+
     </>
   )
 }

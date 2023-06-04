@@ -15,7 +15,7 @@ const Rotate = () => {
                 // transition={{ duration: 2 }}
                 // transition={{ delay: 1 }}
                 // transition={{ type: 'tween', duration: 1 }}
-                // transition={{ type: "spring", bounce: 5, stiffness: 260, damping: 20 }}
+                // transition={{ type: "spring", bounce: 5, stiffness: 260, damping: 20, mass: 0.5, velocity: 2 }}
                 // transition={{ type: "inertia", velocity: 500 }}
                 onClick={() => setRotate(!rotate)}
             >Animate!</motion.div>
