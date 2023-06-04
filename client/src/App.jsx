@@ -6,6 +6,7 @@ import Drag from './components/Drag'
 import Pages from './components/Pages'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import Hover from './components/Hover'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Slide />
       <Scale />
       <Drag />
+      <Hover />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Pages />} />
